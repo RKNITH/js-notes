@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search JavaScript topics...">
+    </div>
+
+    <!-- Main Content -->
+    <section class="container">
+        <h1>JavaScript Basics</h1>
+        <p>JavaScript is a lightweight, interpreted programming language used to make web pages interactive.</p>
+
+        <!-- Topics List -->
+        <div class="topics">
+            <div class="topic">
+                <h2>Printing "Hello, World!"</h2>
+                <div class="code-box">
+                    <pre><code>// JavaScript Example
+console.log("Hello, World!");</code></pre>
+                </div>
+            </div>
+
+            <div class="topic">
+                <h2>Variables in JavaScript</h2>
+                <div class="code-box">
+                    <pre><code>// Declaring variables
+var x = 5;
+let y = 10;
+const z = 15;</code></pre>
+                </div>
+            </div>
+
+            <div class="topic">
+                <h2>Functions in JavaScript</h2>
+                <div class="code-box">
+                    <pre><code>// Function example
+function greet(name) {
+    return "Hello, " + name;
+}
+console.log(greet("Alice"));</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> JavaScript Notes | All Rights Reserved</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
