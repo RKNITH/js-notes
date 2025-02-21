@@ -16,6 +16,7 @@
     </div>
 
     <!-- Main Content -->
+
     <section class="container">
         <h1>JavaScript Basics</h1>
         <p>JavaScript is a lightweight, interpreted programming language used to make web pages interactive.</p>
@@ -24,6 +25,7 @@
         <div class="topics">
             <div class="topic">
                 <h2>Printing "Hello, World!"</h2>
+                <p>The `console.log()` function is used to print messages to the browser console.</p>
                 <div class="code-box">
                     <pre><code>// JavaScript Example
 console.log("Hello, World!");</code></pre>
@@ -32,6 +34,12 @@ console.log("Hello, World!");</code></pre>
 
             <div class="topic">
                 <h2>Variables in JavaScript</h2>
+                <p>JavaScript variables can be declared using `var`, `let`, or `const`.</p>
+                <ul>
+                    <li><code>var</code> - Function-scoped and can be re-declared.</li>
+                    <li><code>let</code> - Block-scoped and cannot be re-declared.</li>
+                    <li><code>const</code> - Block-scoped and cannot be reassigned.</li>
+                </ul>
                 <div class="code-box">
                     <pre><code>// Declaring variables
 var x = 5;
@@ -41,7 +49,32 @@ const z = 15;</code></pre>
             </div>
 
             <div class="topic">
+                <h2>Data Types in JavaScript</h2>
+                <p>JavaScript has the following primitive data types:</p>
+                <ul>
+                    <li><code>Number</code> - Represents numbers (e.g., 10, 3.14).</li>
+                    <li><code>String</code> - Represents text (e.g., "Hello").</li>
+                    <li><code>Boolean</code> - Represents true or false values.</li>
+                    <li><code>Undefined</code> - Variable that has been declared but not assigned a value.</li>
+                    <li><code>Null</code> - Represents an empty value.</li>
+                    <li><code>Symbol</code> - Represents unique values.</li>
+                    <li><code>Object</code> - Complex data structure that can store multiple values.</li>
+                </ul>
+                <div class="code-box">
+                    <pre><code>// Example of different data types
+let num = 10;        // Number
+let text = "Hello";  // String
+let isTrue = true;   // Boolean
+let value;           // Undefined
+let empty = null;    // Null
+let id = Symbol("id"); // Symbol
+let person = {name: "Alice", age: 25}; // Object</code></pre>
+                </div>
+            </div>
+
+            <div class="topic">
                 <h2>Functions in JavaScript</h2>
+                <p>Functions in JavaScript are blocks of reusable code that perform specific tasks.</p>
                 <div class="code-box">
                     <pre><code>// Function example
 function greet(name) {
@@ -50,8 +83,152 @@ function greet(name) {
 console.log(greet("Alice"));</code></pre>
                 </div>
             </div>
+
+            <div class="topic">
+                <h2>Arrow Functions</h2>
+                <p>Arrow functions provide a shorter syntax for writing functions.</p>
+                <div class="code-box">
+                    <pre><code>// Arrow function example
+const greet = (name) => `Hello, ${name}`;
+console.log(greet("Alice"));</code></pre>
+                </div>
+            </div>
+
+            <div class="topic">
+                <h2>Conditional Statements</h2>
+                <p>JavaScript supports conditional statements to execute different code blocks based on conditions.</p>
+                <div class="code-box">
+                    <pre><code>// If-else example
+let age = 18;
+if (age >= 18) {
+    console.log("You are an adult.");
+} else {
+    console.log("You are a minor.");
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="topic">
+                <h2>Loops in JavaScript</h2>
+                <p>Loops are used to execute a block of code multiple times.</p>
+                <ul>
+                    <li><code>for</code> loop - Runs a block of code a specific number of times.</li>
+                    <li><code>while</code> loop - Runs a block of code while a condition is true.</li>
+                    <li><code>do...while</code> loop - Runs a block of code at least once, then repeats while a
+                        condition is true.</li>
+                </ul>
+                <div class="code-box">
+                    <pre><code>// For loop example
+for (let i = 0; i < 5; i++) {
+    console.log("Iteration " + i);
+}
+
+// While loop example
+let i = 0;
+while (i < 5) {
+    console.log("Iteration " + i);
+    i++;
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="topic">
+                <h2>Arrays in JavaScript</h2>
+                <p>Arrays are used to store multiple values in a single variable.</p>
+                <div class="code-box">
+                    <pre><code>// Array example
+let fruits = ["Apple", "Banana", "Cherry"];
+console.log(fruits[0]); // Output: Apple</code></pre>
+                </div>
+            </div>
+
+            <div class="topic">
+                <h2>Objects in JavaScript</h2>
+                <p>Objects store data in key-value pairs.</p>
+                <div class="code-box">
+                    <pre><code>// Object example
+let person = {
+    name: "Alice",
+    age: 25,
+    greet: function() {
+        return "Hello, " + this.name;
+    }
+};
+console.log(person.greet());</code></pre>
+                </div>
+            </div>
+
+            <div class="topic">
+                <h2>DOM Manipulation</h2>
+                <p>The Document Object Model (DOM) allows JavaScript to interact with HTML elements.</p>
+                <div class="code-box">
+                    <pre><code>// DOM manipulation example
+document.getElementById("demo").innerHTML = "Hello, JavaScript!";</code></pre>
+                </div>
+            </div>
+
+            <div class="topic">
+                <h2>Event Listeners</h2>
+                <p>JavaScript can respond to user interactions using event listeners.</p>
+                <div class="code-box">
+                    <pre><code>// Event listener example
+document.getElementById("myButton").addEventListener("click", function() {
+    alert("Button clicked!");
+});</code></pre>
+                </div>
+            </div>
+
+            <div class="topic">
+                <h2>Promises and Async/Await</h2>
+                <p>Promises handle asynchronous operations, and async/await makes asynchronous code easier to read.</p>
+                <div class="code-box">
+                    <pre><code>// Promise example
+let myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("Data received!"), 2000);
+});
+myPromise.then(data => console.log(data));
+
+// Async/Await example
+async function fetchData() {
+    let response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+    let data = await response.json();
+    console.log(data);
+}
+fetchData();</code></pre>
+                </div>
+            </div>
         </div>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Footer -->
     <footer class="footer">
